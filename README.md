@@ -8,5 +8,5 @@ cd mesos-marathon-vagrant
 vagrant up
 ```
 Access
-> localhost:8080  #marathon
-> localhost:505   #mesos
+Access to marathon:  localhost:8080  
+Access to mesos : localhost:5050   
