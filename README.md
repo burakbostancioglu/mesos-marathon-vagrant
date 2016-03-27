@@ -1,5 +1,6 @@
 # mesos-marathon-vagrant
-Very simple vagrant and shell provisioner for mesos, zookeeper and marathon 1.0 RCI
+Very fast provision a local single mesos/marathon cluster.
+It installsmesos, zookeeper and marathon 1.0 RCI
 ## Usage 
 ```shell
 git clone https://github.com/burakbostancioglu/mesos-marathon-vagrant.git
