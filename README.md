@@ -6,3 +6,7 @@ It installsmesos, zookeeper and marathon 1.0 RCI
 git clone https://github.com/burakbostancioglu/mesos-marathon-vagrant.git
 cd mesos-marathon-vagrant
 vagrant up
+```
+Access
+> localhost:8080  #marathon
+> localhost:505   #mesos
