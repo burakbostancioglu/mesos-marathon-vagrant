@@ -82,10 +82,12 @@ Vagrant.configure(2) do |config|
 	gpgkey=https://yum.dockerproject.org/gpg
 	EOF
      sudo yum -y install docker-engine
+     echo 'docker,mesos' > /etc/mesos-slave/containerizers
      sudo bash
      systemctl start zookeeper
      systemctl start mesos-master
      systemctl start mesos-slave
+     systemctl start docker
      cd /home/vagrant/marathon-1.0.0-RC1
      nohup ./bin/start --master zk://localhost:2181/mesos --zk zk://localhost:2181/marathon > /dev/null 2>&1 &
    SHELL
