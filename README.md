@@ -1,6 +1,6 @@
 # mesos-marathon-vagrant
 Very fast provision a local single mesos/marathon cluster.
-It installs mesos, docker, zookeeper and marathon 1.0 RCI
+It installs (mesos, docker, zookeeper, chronos and marathon)'s newest version on mesosphere repo.
 ## Usage 
 ```shell
 git clone https://github.com/burakbostancioglu/mesos-marathon-vagrant.git
