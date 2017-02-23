@@ -9,4 +9,5 @@ vagrant up
 ```
 Access
 Access to marathon:  localhost:8080  
-Access to mesos : localhost:5050   
+Access to mesos-master : localhost:5050
+Access to chronos : localhost:4400  
