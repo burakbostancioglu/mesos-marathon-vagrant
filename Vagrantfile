@@ -86,6 +86,9 @@ Vagrant.configure(2) do |config|
      sudo yum -y install docker-engine
      echo 'docker,mesos' > /etc/mesos-slave/containerizers
      sudo bash
+     echo 'MARATHON_MASTER="zk://localhost:2181/mesos"' >> /etc/default/marathon
+     echo 'MARATHON_ZK="zk://localhost:2181/marathon"' >> /etc/default/marathon
+     echo 'MARATHON_MESOS_USER="root"' >> /etc/default/marathon
      systemctl start zookeeper
      systemctl start mesos-master
      systemctl start mesos-slave
