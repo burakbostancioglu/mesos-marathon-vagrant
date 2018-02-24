@@ -71,10 +71,12 @@ Vagrant.configure(2) do |config|
    config.vm.provision "shell", inline: <<-SHELL
      sudo rpm -Uvh http://repos.mesosphere.com/el/7/noarch/RPMS/mesosphere-el-repo-7-1.noarch.rpm
      sudo yum -y install mesosphere-zookeeper
-     sudo yum -y install mesos
-     sudo yum -y install marathon
+     sudo yum -y install mesos-1.5.0
+     sudo yum -y install marathon-1.5.2
      sudo yum -y install chronos
      echo "1" > /var/lib/zookeeper/myid
+     sudo sed -i '/ExecStart=/c\ExecStart=\/usr\/share\/marathon\/bin\/marathon --master zk:\/\/127.0.0.1:2181\/mesos --zk zk:\/\/127.0.0.1:2181\/marathon' /lib/systemd/system/marathon.service
+     sudo systemctl daemon-reload
      sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
 	[dockerrepo]
 	name=Docker Repository
